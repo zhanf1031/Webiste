@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Sichuan Cuisine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="https://feriszhang.neocities.org/image%20/Screenshot%202024-06-17%20at%2002.07.00.png" alt="Sichuan Cuisine Logo" class="logo">
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+        </div>
+        <nav id="menu" class="hidden">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="holiday-foods.html">Holiday Foods</a></li>
+                <li><a href="street-foods.html">Street Foods</a></li>
+                <li><a href="signature-dishes.html">Signature Dishes</a></li>
+                <li><a href="recipe-guide.html">Recipe Guide</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <img src="https://feriszhang.neocities.org/image%20/l9klo7uuysb81.webp" style="width:100%">
+                </div>
+                <div class="slide fade">
+                    <img src="https://feriszhang.neocities.org/image%20/sddefault.jpg" style="width:100%">
+                </div>
+                <div class="slide fade">
+                    <img src="https://feriszhang.neocities.org/image%20/w1200.jpeg" style="width:100%">
+                </div>
+            </div>
+            <div class="hero-text">
+                <h1>Welcome to Sichuan Cuisine</h1>
+                <p>Discover the rich flavors and vibrant culture of Sichuan cuisine.</p>
+            </div>
+        </section>
+        <section class="introduction">
+            <h2>About Sichuan Cuisine</h2>
+            <p>Sichuan cuisine, known for its bold and spicy flavors, is one of the most famous cuisines in China. It features a variety of dishes that use ingredients like chili peppers, garlic, and Sichuan peppercorns.</p>
+        </section>
+        <section class="featured-dishes">
+            <h2>Featured Dishes</h2>
+            <div class="dishes">
+                <div class="dish">
+                    <img src="https://feriszhang.neocities.org/image%20/kungpaochicken2-scaled.webp" alt="Kung Pao Chicken">
+                    <h3>Kung Pao Chicken</h3>
+                    <p>A classic Sichuan dish made with diced chicken, peanuts, and vegetables, all stir-fried with a flavorful and spicy sauce.</p>
+                </div>
+                <div class="dish">
+                    <img src="https://feriszhang.neocities.org/image%20/mapo-tofu-10.jpg" alt="Mapo Tofu">
+                    <h3>Mapo Tofu</h3>
+                    <p>A spicy and aromatic dish made with soft tofu set in a spicy chili and bean-based sauce, typically cooked with minced meat and Sichuan peppercorns.</p>
+                </div>
+                <div class="dish">
+                    <img src="https://feriszhang.neocities.org/image%20/a14a251e-d702-4fc4-b9a7-fe16ee65982e--2021-0707_sichuan-hot-pot_3x2_mj-kroeger.jpg" alt="Sichuan Hotpot">
+                    <h3>Sichuan Hotpot</h3>
+                    <p>A communal meal where diners cook a variety of ingredients like meat, vegetables, and tofu in a simmering pot of spicy and flavorful broth right at the table.</p>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or would like to learn more about Sichuan cuisine, please contact us at:</p>
+            <p>Email: info@sichuancuisine.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sichuan Cuisine. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Slideshow script
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+    </script>
+</body>
+</html>
